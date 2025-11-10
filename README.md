@@ -6,7 +6,7 @@
 
 - Diego Mathias — RA: 2705982
 - Nicolas Gabriel Brunismann — RA: 2716011
-- Luan Cesar Costa — RA: __________
+- Luan Cesar Costa — RA: 2706032
 
 ## Sumário de Fases
 
