@@ -2,15 +2,20 @@ using PooInterface.Core.Formatters;
 using PooInterface.Core.Models;
 using PooInterface.Core.Repositories;
 
-Console.WriteLine("PooInterface demo\n");
+Console.WriteLine("PooInterface demo - Fase 3: OO sem Interface\n");
 
-// Demo formatter usage (Fase 2/3/4)
+// Demo formatter usage (Fase 3: OO com polimorfismo, sem if/switch)
 var raw = "hello world from poointerface";
-Console.WriteLine("Procedural TitleCase: " + FormatterProcedural.Format(raw, FormatterProcedural.Mode.TitleCase));
-var fmt = new TitleCaseFormatter();
-Console.WriteLine("OO TitleCase: " + fmt.Format(raw));
-var ifmt = new InterfaceTitleCaseFormatter();
-Console.WriteLine("Interface TitleCase: " + ifmt.Format(raw));
+
+// Usando factory para seleção dinâmica de formatadores (sem switch)
+var modos = new[] { "upper", "lower", "title", "reverse", "invalid" };
+Console.WriteLine("OO formatters (polimorfismo):");
+foreach (var modo in modos)
+{
+    var formatter = FormatterOOFactory.GetFormatter(modo);
+    var result = formatter.Format(raw);
+    Console.WriteLine($"  Mode '{modo}': {result}");
+}
 
 // Demo repository (in-memory)
 var repo = new InMemoryRepository();

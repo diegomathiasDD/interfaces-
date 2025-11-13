@@ -15,6 +15,7 @@
 - Fase 2 — Procedural mínimo (`src/fase-02-procedural-minimo`)
     - Entrega da Fase 2 (artefato): `src/fase-02-procedural-minimo/FASE-02-Procedure-Minimo.md`
 - Fase 3 — OO sem interface (`src/fase-03-oo-sem-interface`)
+    - Entrega da Fase 3 (artefato): `src/fase-03-oo-sem-interface/FASE-03-OO-Sem-Interface.md`
 - Fase 4 — Interface plugável e testável (`src/fase-04-com-interfaces`)
 - Fase 5 — Essenciais de interfaces em C# (`src/fase-05-essenciais-interfaces-csharp`)
 - Fase 6 — ISP na prática (`src/fase-06-isp`)
