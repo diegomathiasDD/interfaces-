@@ -17,6 +17,7 @@
 - Fase 3 — OO sem interface (`src/fase-03-oo-sem-interface`)
     - Entrega da Fase 3 (artefato): `src/fase-03-oo-sem-interface/FASE-03-OO-Sem-Interface.md`
 - Fase 4 — Interface plugável e testável (`src/fase-04-com-interfaces`)
+    - Entrega da Fase 4 (artefato): `src/fase-04-com-interfaces/FASE-04-Com-Interfaces.md`
 - Fase 5 — Essenciais de interfaces em C# (`src/fase-05-essenciais-interfaces-csharp`)
 - Fase 6 — ISP na prática (`src/fase-06-isp`)
 - Fase 7 — Repository InMemory (`src/fase-07-repository-inmemory`)
@@ -76,18 +77,26 @@ Colocar prints curtos ou logs mínimos em `docs/` se fizer sentido para a Fase (
 
 ## Como executar
 
-Para compilar e rodar os projetos:
+Para compilar e rodar os projetos de todas as fases:
 
 ```powershell
-# Compilar os projetos
-dotnet build src/PooInterface.Core/PooInterface.Core.csproj
-dotnet build src/PooInterface.App/PooInterface.App.csproj
+# Compilar toda a solução
+dotnet build pOOInterface.sln
 
-# Rodar a demo
+# Rodar a aplicação principal (Fases 2-4 integradas)
 cd src/PooInterface.App
 dotnet run
 
-# Executar os testes
+# Executar todos os testes (Fases 2-4)
 cd ../../tests/PooInterface.Tests
 dotnet test
+
+# Executar teste verbose (com detalhes)
+dotnet test -v detailed
 ```
+
+## Testes por Fase
+
+- **Fase 2 (Procedural mínimo):** Testes em `FormatterTests.cs` — valida switch/if
+- **Fase 3 (OO sem interface):** Testes em `Phase3OOFormatterTests` — valida polimorfismo
+- **Fase 4 (Interface plugável):** Testes em `Phase4InterfaceFormatterTests` — valida injeção de dependência e dublês
